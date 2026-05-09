@@ -3,109 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>総合的な学習の時間｜授業あるある構造分析</title>
+  <title>読書記録レポート｜令和時代の総合的な学習の時間入門</title>
+  <meta property="og:title" content="読書記録レポート｜令和時代の総合的な学習の時間入門" />
+  <meta property="og:description" content="70点の条件設計と授業運用の型を1ページで整理した、総合的な学習の時間の実践ガイド。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/ogp.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/ogp.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f6f8fc;
-      --surface: #ffffff;
-      --text: #1f2a44;
-      --muted: #5d6b85;
-      --primary: #4b69ff;
-      --primary-soft: #e8edff;
-      --accent: #16b3a3;
-      --border: #dfe6f7;
+      --bg: #f7f6f2;
+      --paper: #fffdf8;
+      --ink: #20262e;
+      --muted: #5c636d;
+      --green: #2b7a65;
+      --green-soft: #dff1ea;
+      --line: #dfded8;
+      --accent: #f3a743;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif;
-      background: linear-gradient(180deg, #f9fbff 0%, #f4f7fd 100%);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    .container { width: min(1080px, 92vw); margin: 0 auto; }
-    .hero { padding: 72px 0 56px; }
-    .tag {
-      display: inline-block; padding: 8px 14px; border-radius: 999px;
-      background: var(--primary-soft); color: var(--primary); font-weight: 700; font-size: 14px;
-    }
-    h1 { font-size: clamp(30px, 5vw, 52px); line-height: 1.2; margin: 16px 0; letter-spacing: 0.02em; }
-    .lead { color: var(--muted); font-size: 18px; max-width: 860px; }
-    .cta-row { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn {
-      display: inline-block; padding: 13px 20px; border-radius: 12px;
-      text-decoration: none; font-weight: 700; border: 1px solid transparent;
-    }
-    .btn.primary { background: var(--primary); color: #fff; }
-    .btn.secondary { background: #fff; color: var(--primary); border-color: var(--border); }
-    section { padding: 36px 0; }
-    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .card {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
-      padding: 20px; box-shadow: 0 8px 28px rgba(21, 36, 86, 0.06);
-    }
-    .card h3 { margin: 0 0 8px; font-size: 20px; }
-    .card p { margin: 0; color: var(--muted); font-size: 15px; }
-    h2 { font-size: clamp(24px, 3.4vw, 36px); margin: 0 0 18px; }
-    .list { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
-    .list li {
-      background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--accent);
-      border-radius: 12px; padding: 14px 16px;
-    }
-    .highlight {
-      background: #111b33; color: #eaf0ff; border-radius: 22px;
-      padding: 34px 24px;
-    }
-    .highlight strong { color: #8ad3ff; }
-    footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Zen Kaku Gothic New",sans-serif;background:var(--bg);color:var(--ink);line-height:1.8}
+    .wrap{width:min(1100px,92vw);margin:auto}
+    .hero{padding:72px 0 36px}
+    .badge{display:inline-block;background:var(--green-soft);color:var(--green);padding:6px 12px;border-radius:999px;font-weight:700}
+    h1{font-size:clamp(30px,5vw,54px);line-height:1.22;margin:.4em 0}
+    .lead{font-size:18px;color:var(--muted);max-width:900px}
+    .quick-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .quick-links a{padding:10px 14px;background:#fff;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);transition:.25s}
+    .quick-links a:hover{transform:translateY(-2px);box-shadow:0 10px 18px rgba(0,0,0,.08);border-color:var(--green)}
+    section{padding:28px 0}
+    h2{font-size:clamp(24px,3.5vw,38px);margin:0 0 14px}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px}
+    .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .toc a{display:block;background:#fff;padding:14px;border-radius:12px;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:700;transition:.25s}
+    .toc a:hover{background:var(--green-soft);border-color:var(--green)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;transition:.25s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 24px rgba(24,40,32,.12);border-color:var(--green)}
+    .card h3{margin:.2em 0 .4em;font-size:19px}
+    .card p{margin:0;color:var(--muted)}
+    .ring{border-left:5px solid var(--accent);padding-left:14px;margin:10px 0}
+    .quote-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+    blockquote{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-weight:500}
+    footer{padding:36px 0 48px;color:var(--muted)}
+    .icon-title{display:flex;align-items:center;gap:10px}
+    .icon-title img{width:22px;height:22px;color:var(--green)}
+    .hero-visual{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:8px}
+    .hero-visual img{width:100%;height:auto;display:block;border-radius:12px}
   </style>
 </head>
 <body>
-  <header class="hero container">
-    <span class="tag">同僚の先生へおすすめ</span>
-    <h1>総合的な学習の時間における<br>「現代の授業あるある」の構造分析</h1>
-    <p class="lead">松村英治『令和時代の総合的な学習の時間入門』の読書記録をもとに、総合で起こりがちなつまずきを6領域に整理。<br>明日から使える<strong>「70点の及第点設計」</strong>と<strong>「毎時間の型」</strong>を簡潔にまとめました。</p>
-    <div class="cta-row">
-      <a class="btn primary" href="#issues">6つのあるあるを見る</a>
-      <a class="btn secondary" href="#practice">実装の最小構成を見る</a>
-    </div>
+  <header class="hero wrap">
+    <span class="badge">読書記録レポート</span>
+    <h1>令和時代の総合的な学習の時間入門<br>（松村英治）をもとに</h1>
+    <p class="lead">このページは、同僚教員向けに「本書の実践的エッセンス」を1ページで共有するLPです。総合を難しくしすぎず、<strong>70点を安定して出す設計</strong>と授業運用の型に焦点化しました。</p>
+    <nav class="quick-links">
+      <a href="#toc">目次へ</a><a href="#patterns">典型パターン</a><a href="#design">70点設計</a><a href="#models">単元モデル</a><a href="#quotes">名言風リスト</a>
+      <a href="https://y-michikusa.org/" target="_blank" rel="noopener noreferrer">参考デザインサイト</a>
+    </nav>
+      <div class="hero-visual"><img src="assets/hero-visual.svg" alt="70点設計と授業運用の関係を示したヒーロー図"></div>
   </header>
 
-  <section id="issues" class="container">
-    <h2>現代の総合で頻発する「6つのあるある」</h2>
-    <div class="grid">
-      <article class="card"><h3>① 計画と運用の乖離</h3><p>年間計画が「地図」ではなく「縛り」になると、授業は消化モードになりやすい。</p></article>
-      <article class="card"><h3>② 活動の目的化</h3><p>行事連動や交流が固定化し、「なぜやるか」より「毎年やる」が優先される。</p></article>
-      <article class="card"><h3>③ 収束不全</h3><p>「とりあえず調べる」で拡散が続き、課題設定・整理分析の質が落ちる。</p></article>
-      <article class="card"><h3>④ 出口の曖昧化</h3><p>終末の順序が崩れると共通認識が作れず、次時への接続が弱くなる。</p></article>
-      <article class="card"><h3>⑤ 個の埋没と評価困難</h3><p>集団活動で一部の児童が主導し、個の見取りと所見評価が難しくなる。</p></article>
-      <article class="card"><h3>⑥ ICTの手段目的化</h3><p>端末活用が目的化すると、探究の目的に対する手段選択がぼやける。</p></article>
-    </div>
-  </section>
+  <main class="wrap">
+    <section id="toc" class="panel">
+      <h2>レポート目次（クリックで移動）</h2>
+      <div class="toc">
+        <a href="#claim">1. 本書の中心主張</a><a href="#patterns">2. 典型パターン</a><a href="#design">3. 70点の条件設計</a>
+        <a href="#operation">4. 授業運用の基本形</a><a href="#models">5. 単元モデル3類型</a><a href="#pitfalls">6. 落とし穴と処方箋</a>
+        <a href="#tools">7. 思考とツール</a><a href="#evaluation">8. 評価と所見</a><a href="#device">9. 端末活用</a>
+        <a href="#teacher">10. 教師の指導力</a><a href="#diagram">11. 図解骨組み</a><a href="#apply">12. 具体適用</a>
+        <a href="#quotes">13. 名言風の言葉</a>
+      </div>
+    </section>
 
-  <section class="container">
-    <div class="highlight">
-      <h2>改善のカギ：再現性のある介入枠組み</h2>
-      <p><strong>70点の及第点設計</strong>で「必須枠」と「自由枠」を分け、毎年度改善できる余白を確保。<br>
-      さらに、毎時間の流れを<strong>「まとめ → 見通し → 振り返り」</strong>で統一することで、探究の迷子化を防ぎます。</p>
-    </div>
-  </section>
+    <section id="claim"><h2 class="icon-title"><img src="assets/icons/book.svg" alt="">1. 本書の中心主張</h2><p class="ring">総合を「一部の名人教師の授業」にしないこと。理想の完璧実装より、誰でも回せる運用骨格を先に整えることで、実践格差・固定化・形骸化を防ぐ。</p></section>
 
-  <section id="practice" class="container">
-    <h2>学校内実装の最小構成（これだけで始める）</h2>
-    <ul class="list">
-      <li><strong>1.</strong> 学年で探究課題・必須枠・自由枠を合意する</li>
-      <li><strong>2.</strong> 毎時間の終末の型を統一する（まとめ→見通し→振り返り）</li>
-      <li><strong>3.</strong> 導入で「何のために調べるか」を言語化する</li>
-      <li><strong>4.</strong> 単元中に所見の根拠となる見取り計画を組み込む</li>
-    </ul>
-  </section>
+    <section id="patterns"><h2>2. 総合がうまくいかない典型パターン</h2>
+      <div class="cards">
+        <article class="card"><h3>タイプ1：計画絶対視</h3><p>年間計画を守ることが目的化し、教師主導・時間不足に陥る。</p></article>
+        <article class="card"><h3>タイプ2：行事既定路線化</h3><p>時期が来ると一斉準備。問いや評価軸より段取りが優先される。</p></article>
+        <article class="card"><h3>タイプ3：外部連携固定化</h3><p>地域交流の再交渉コストが重く、前例踏襲に流れやすい。</p></article>
+        <article class="card"><h3>タイプ4：活動自己目的化</h3><p>目標との接続が弱く「活動はあるが学びが薄い」状態になる。</p></article>
+      </div>
+    </section>
 
-  <footer class="container">
-    参考：松村英治『令和時代の総合的な学習の時間入門』読書記録（Kindleハイライト）に基づく要約
-  </footer>
+    <section id="design"><h2 class="icon-title"><img src="assets/icons/target.svg" alt="">3.「70点の総合」を安定させる条件設計</h2><div class="panel"><ol>
+      <li>学年目標にふさわしい探究課題を全体計画上で明確化。</li><li>年間計画は可読性を重視して詳細化（高度化のためではない）。</li><li>年度初期に「必須枠」と「自由枠」を分けて合意。</li><li>運用は子どもと相談し、行き詰まりは教師も立ち止まり更新。</li><li>評価・所見を見据えた個別記録を単元中から残す。</li></ol></div></section>
+
+    <section id="operation"><h2>4. 授業運用の基本形</h2><p class="ring">毎時間の出口を「まとめ → 見通し → 振り返り」で固定。授業冒頭は“確認”から入り、次の行動を児童が言語化できる状態をつくる。</p></section>
+
+    <section id="models"><h2>5. 単元モデルの整理と使い分け</h2><div class="cards">
+      <article class="card"><h3>魅力・よさ発信型</h3><p>地域価値の再発見と伝達。意味づけまで設計して終える。</p></article>
+      <article class="card"><h3>やるべきこと実践型</h3><p>地域課題への実践。開始前に「小学生が実行可能なこと」を調査。</p></article>
+      <article class="card"><h3>やりたいこと実現型（推奨）</h3><p>好き・作りたいから出発し、助言と改善で質を高めて表現へ。</p></article>
+    </div></section>
+
+    <section id="pitfalls"><h2>6. 落とし穴と処方箋</h2><p class="ring">「とりあえず調べる」はNG。体験→気づき共有→調べる目的の言語化→情報収集へ。探究は常に拡散と収束の往還として設計する。</p></section>
+    <section id="tools"><h2 class="icon-title"><img src="assets/icons/lightbulb.svg" alt="">7. 思考とツールの扱い</h2><p>思考ツールは万能ではない。順序付け・比較・分類・関連付け・多面的多角的・理由付け・見通し・具体化・抽象化・構造化という狙う思考スキルとセットで使う。</p></section>
+    <section id="evaluation"><h2 class="icon-title"><img src="assets/icons/chart.svg" alt="">8. 評価の考え方と所見</h2><p>評価を「指導に生かす評価」と「記録に残す評価」に分ける。集団活動で埋もれる個を見取るために、所見根拠は単元途中から観察・記録する。</p></section>
+    <section id="device"><h2>9. 端末活用の位置づけ</h2><p>端末活用は「代替→目的化→目的達成のための吟味」の段階で捉える。総合では特に、探究過程のどこで何のために使うかを先に決める。</p></section>
+    <section id="teacher"><h2>10. 教師の指導力が上がる含意</h2><p>総合は問い設計・まとめの明確化・見立て・問い返し・柔軟な見取りを鍛える。教科で育った専門性と総合の往還が、学校全体の授業力を押し上げる。</p></section>
+    <section id="diagram"><h2>11. 図解に落とすための骨組み</h2><p class="ring">中心に「70点条件設計」。内側リング：計画・必須/自由枠・毎時の型。中間リング：拡散収束・思考スキル/ツール・落とし穴。外側リング：単元3類型・評価二分・端末段階・教科往還。</p></section>
+    <section id="apply"><h2>12. 教育現場への具体的適用ポイント</h2><div class="panel"><ul>
+      <li>出口を「まとめ→見通し→振り返り」で統一</li><li>導入で体験的に問いを立て、調べる目的を言語化</li><li>年間計画は誰が読んでも分かる粒度で整備</li><li>必須枠と自由枠を先に合意</li><li>見取りは単元途中から収集して所見を準備</li>
+    </ul></div></section>
+
+    <section id="quotes"><h2>13. 名言風の言葉一覧</h2><div class="quote-grid">
+      <blockquote>総合を難しくすると、教師の挑戦が減り、学びの格差が増える。</blockquote>
+      <blockquote>計画は緻密に作るが、緻密さは共通理解のために使う。</blockquote>
+      <blockquote>主体性は放任ではなく、合意と更新で育つ。</blockquote>
+      <blockquote>調べる前に、何のために調べるかを共有する。</blockquote>
+      <blockquote>広がっただけでは深まらない。深まりは収束で生まれる。</blockquote>
+      <blockquote>思考ツールは道具であり、狙う思考が先にある。</blockquote>
+      <blockquote>活動があるのに学びがないとき、欠けているのは問いと評価の軸である。</blockquote>
+      <blockquote>総合は教科を越える時間ではなく、教科を鍛え直す時間でもある。</blockquote>
+      <blockquote>端末は便利だが、目的が曖昧なら学びを薄くする。</blockquote>
+      <blockquote>70点を安定させると、次の一歩を踏み出す余力が生まれる。</blockquote>
+    </div></section>
+  </main>
+
+  <footer class="wrap">参考サイト：<a href="https://y-michikusa.org/" target="_blank" rel="noopener noreferrer">y-michikusa.org</a> / 本ページは読書記録に基づく共有用LPです。</footer>
 </body>
 </html>
