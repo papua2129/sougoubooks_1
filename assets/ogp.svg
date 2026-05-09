@@ -1,0 +1,9 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7F6F2"/>
+  <rect x="36" y="36" width="1128" height="558" rx="30" fill="#FFFDF8" stroke="#DFDED8" stroke-width="2"/>
+  <text x="90" y="190" font-family="sans-serif" font-size="64" font-weight="700" fill="#20262E">読書記録レポート</text>
+  <text x="90" y="275" font-family="sans-serif" font-size="44" fill="#2B7A65">令和時代の総合的な学習の時間入門</text>
+  <text x="90" y="350" font-family="sans-serif" font-size="36" fill="#20262E">70点の条件設計 × 授業運用の型</text>
+  <rect x="90" y="420" width="450" height="74" rx="18" fill="#2B7A65"/>
+  <text x="120" y="468" font-family="sans-serif" font-size="34" fill="white">for Elementary Teachers</text>
+</svg>
